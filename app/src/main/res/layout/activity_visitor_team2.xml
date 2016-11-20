@@ -26,7 +26,6 @@
             android:padding="25dp"
             android:textSize="20sp"
             android:layout_gravity="left"
-            tools:layout_editor_absoluteY="0dp"
             app:layout_constraintLeft_toLeftOf="@+id/guideline" />
 
         <!--app:layout_constraintLeft_toLeftOf="@+id/guideline"-->
@@ -40,7 +39,6 @@
             android:textColor="@color/black"
             android:gravity="center_horizontal"
             android:layout_gravity="center_horizontal"
-            tools:layout_editor_absoluteY="10dp"
             app:layout_constraintLeft_toLeftOf="@+id/textView4" />
 
         <Button
@@ -51,7 +49,6 @@
             android:padding="25dp"
             android:textSize="25sp"
             android:layout_gravity="right"
-            tools:layout_editor_absoluteY="0dp"
             app:layout_constraintRight_toLeftOf="@+id/guideline2"
             android:layout_marginEnd="8dp" />
 
@@ -65,10 +62,6 @@
                 android:paddingLeft="15dp"
                 android:hapticFeedbackEnabled="true"
                 android:background="@drawable/custom_button"
-                tools:layout_conversion_absoluteX="5dp"
-                tools:layout_conversion_absoluteY="111dp"
-                tools:layout_conversion_absoluteWidth="375dp"
-                tools:layout_conversion_absoluteHeight="50dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="@+id/guideline"
                 app:layout_constraintTop_toBottomOf="@+id/gobackhome"/>
@@ -191,7 +184,7 @@
                 android:textSize="30sp"
                 android:background="@drawable/custom_button"
                 app:layout_constraintTop_toBottomOf="@+id/playerf5"
-                app:layout_constraintLeft_toLeftOf="@+id/linetwobutton" />
+                app:layout_constraintLeft_toLeftOf="@+id/playerf4" />
 
             <com.anoniq.gabort.oio.PlayerButton
                 android:text="d2.2"
@@ -201,8 +194,8 @@
                 android:padding="20dp"
                 android:textSize="30sp"
                 android:background="@drawable/custom_button"
-                tools:layout_editor_absoluteY="440dp"
-                app:layout_constraintLeft_toLeftOf="@+id/playerf5" />
+                app:layout_constraintLeft_toLeftOf="@+id/playerf5"
+                app:layout_constraintTop_toBottomOf="@+id/playerf5"/>
             <!--END LINE 2-->
 
 
@@ -218,9 +211,8 @@
                 android:hapticFeedbackEnabled="true"
                 android:background="@drawable/custom_button"
                 android:layout_height="wrap_content"
-                tools:layout_editor_absoluteY="111dp"
-                android:layout_marginStart="8dp"
-                app:layout_constraintLeft_toRightOf="@+id/textView4" />
+                app:layout_constraintLeft_toRightOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="@id/lineonebutton"/>
 
             <com.anoniq.gabort.oio.PlayerButton
                 android:text="f3.1"
@@ -230,8 +222,8 @@
                 android:padding="20dp"
                 android:textSize="30sp"
                 android:background="@drawable/custom_button"
-                tools:layout_editor_absoluteY="161dp"
-                app:layout_constraintLeft_toLeftOf="@+id/linethreebutton" />
+                app:layout_constraintLeft_toLeftOf="@+id/linethreebutton"
+                app:layout_constraintTop_toBottomOf="@id/linethreebutton"/>
 
             <com.anoniq.gabort.oio.PlayerButton
                 android:text="f3.2"
@@ -263,8 +255,8 @@
                 android:padding="20dp"
                 android:textSize="30sp"
                 android:background="@drawable/custom_button"
-                tools:layout_editor_absoluteY="237dp"
-                app:layout_constraintLeft_toLeftOf="@+id/playerf7" />
+                app:layout_constraintLeft_toLeftOf="@+id/playerf7"
+                app:layout_constraintTop_toBottomOf="@id/playerf7"/>
 
             <com.anoniq.gabort.oio.PlayerButton
                 android:text="d3.2"
@@ -275,7 +267,6 @@
                 android:textSize="30sp"
                 android:background="@drawable/custom_button"
                 app:layout_constraintTop_toBottomOf="@+id/playerf7"
-                android:layout_marginStart="8dp"
                 app:layout_constraintLeft_toRightOf="@+id/playerd5" />
 
             <!--END LINE 3-->
@@ -288,7 +279,6 @@
                 android:textColor="@color/colorLine"
                 android:textSize="25dp"
                 android:text="@string/fourthline"
-                android:paddingLeft="0dp"
                 android:hapticFeedbackEnabled="true"
                 android:background="@drawable/custom_button"
                 android:layout_height="wrap_content"
@@ -314,8 +304,8 @@
                 android:padding="20dp"
                 android:textSize="30sp"
                 android:background="@drawable/custom_button"
-                tools:layout_editor_absoluteX="736dp"
-                app:layout_constraintTop_toBottomOf="@+id/linefourbutton" />
+                app:layout_constraintTop_toBottomOf="@+id/linefourbutton"
+                app:layout_constraintLeft_toRightOf="@+id/playerf10"/>
 
             <com.anoniq.gabort.oio.PlayerButton
                 android:text="f4.3"
@@ -328,6 +318,17 @@
                 app:layout_constraintLeft_toRightOf="@+id/playerf11"
                 app:layout_constraintTop_toBottomOf="@+id/linefourbutton" />
 
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="d4.1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd8"
+            android:padding="20dp"
+            android:textSize="30sp"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toLeftOf="@+id/linefourbutton"
+            app:layout_constraintTop_toBottomOf="@+id/playerf11" />
+
             <com.anoniq.gabort.oio.PlayerButton
                 android:text="d4.2"
                 android:layout_width="130dp"
@@ -336,19 +337,10 @@
                 android:padding="20dp"
                 android:textSize="30sp"
                 android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/playerf10"
+                app:layout_constraintLeft_toRightOf="@+id/playerd8"
                 app:layout_constraintTop_toBottomOf="@+id/playerf10" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="d4.1"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerd8"
-                android:padding="20dp"
-                android:textSize="30sp"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toRightOf="@+id/playerd7"
-                app:layout_constraintTop_toBottomOf="@+id/playerf11" />
+
             <!--END LINE 4 -->
 
             <!--START GOEALKEEPERS -->
@@ -357,16 +349,11 @@
                 android:textColor="@color/colorLine"
                 android:textSize="25dp"
                 android:text="@string/goalkeeperstext"
-                tools:layout_conversion_absoluteX="495dp"
-                tools:layout_conversion_absoluteY="478dp"
-                tools:layout_conversion_absoluteWidth="139dp"
-                tools:layout_conversion_absoluteHeight="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView5"
                 app:layout_constraintLeft_toRightOf="@+id/playerf6"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/playerd5"
+                app:layout_constraintTop_toBottomOf="@+id/linetwobutton"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp" />
 
@@ -494,9 +481,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/guideline"
                 app:layout_constraintGuide_percent="0.02"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteY="0dp"
-                tools:layout_editor_absoluteX="20dp" />
+                android:orientation="vertical" />
 
             <android.support.constraint.Guideline
                 android:layout_width="wrap_content"
@@ -504,8 +489,7 @@
                 android:id="@+id/guideline2"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.98"
-                tools:layout_editor_absoluteX="1004dp"
-                tools:layout_editor_absoluteY="0dp" />
+                 />
 
 
 
@@ -519,9 +503,9 @@
             android:textSize="20sp"
             android:background="@color/highlighted_text_material_dark"
             android:id="@+id/textView4"
-            tools:layout_editor_absoluteY="112dp"
             android:gravity="center"
-            app:layout_constraintLeft_toRightOf="@+id/playerf3" />
+            app:layout_constraintLeft_toRightOf="@+id/playerf3"
+            app:layout_constraintTop_toTopOf="@id/lineonebutton"/>
 
 
 
