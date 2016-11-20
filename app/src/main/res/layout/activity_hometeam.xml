@@ -1,0 +1,370 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    android:id="@+id/activity_home_team"
+    tools:context="com.anoniq.gabort.oio.HomeTeamActivity">
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="10"
+        android:columnCount="12"
+        android:padding="15dp">
+
+            <Button
+                android:text="@string/backtostart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gobackhome"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="0"
+                />
+
+
+
+        <!--START LINE 1-->
+        <TextView
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:textColor="@color/colorLine"
+            android:textSize="25dp"
+            android:text="@string/firstline"
+            android:paddingLeft="15dp" />
+        <Button
+            android:text="f1.1"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf1"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="f1.2"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf2"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="f1.3"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf3"
+            android:padding="20dp"
+            android:textSize="50sp" />
+
+        <Button
+            android:text="d1.1"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd1"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="d1.2"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd2"
+            android:padding="20dp"
+            android:textSize="50sp" />
+
+        <!--END LINE 1-->
+
+        <!--START LINE 2-->
+        <LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+                android:text="@string/spaces"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_columnSpan="3"
+            android:textColor="@color/colorLine"
+            android:textSize="25dp"
+            android:text="@string/secondline"
+            android:paddingLeft="15dp" />
+
+        <Button
+            android:text="f2.1"
+            android:layout_row="6"
+            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf4"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="f2.2"
+            android:layout_row="6"
+            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf5"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="f2.3"
+            android:layout_row="6"
+            android:layout_column="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf6"
+            android:padding="20dp"
+            android:textSize="50sp" />
+
+        <Button
+            android:text="d2.1"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd3"
+            android:padding="20dp"
+            android:textSize="50sp" />
+
+        <Button
+            android:text="d2.2"
+            android:layout_row="7"
+            android:layout_column="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd4"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <!--END LINE 2-->
+
+        <!--START LINE 3 -->
+
+    <TextView
+        android:layout_row="1"
+        android:layout_column="6"
+        android:layout_columnSpan="3"
+        android:textColor="@color/colorLine"
+        android:textSize="25dp"
+        android:text="@string/thirdline"
+        android:paddingLeft="15dp" />
+
+    <Button
+        android:text="f3.1"
+        android:layout_row="2"
+        android:layout_column="6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerf7"
+        android:padding="20dp"
+        android:textSize="50sp" />
+    <Button
+        android:text="f3.2"
+        android:layout_row="2"
+        android:layout_column="7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerf8"
+        android:padding="20dp"
+        android:textSize="50sp" />
+    <Button
+        android:text="f3.3"
+        android:layout_row="2"
+        android:layout_column="8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playerf9"
+        android:padding="20dp"
+        android:textSize="50sp" />
+
+        <Button
+            android:text="d3.1"
+            android:layout_row="3"
+            android:layout_column="7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd5"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="d3.2"
+            android:layout_row="3"
+            android:layout_column="8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd6"
+            android:padding="20dp"
+            android:textSize="50sp" />
+
+        <!--END LINE 3-->
+
+        <!--START LINE 4 -->
+
+        <TextView
+            android:layout_row="5"
+            android:layout_column="6"
+            android:layout_columnSpan="3"
+            android:textColor="@color/colorLine"
+            android:textSize="25dp"
+            android:text="@string/fourthline"
+            android:paddingLeft="15dp" />
+
+        <Button
+            android:text="f4.1"
+            android:layout_row="6"
+            android:layout_column="6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf10"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="f4.2"
+            android:layout_row="6"
+            android:layout_column="7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf11"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="f4.3"
+            android:layout_row="6"
+            android:layout_column="8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf12"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="d4.2"
+            android:layout_row="7"
+            android:layout_column="8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd7"
+            android:padding="20dp"
+            android:textSize="50sp" />
+
+        <Button
+            android:text="d4.1"
+            android:layout_row="7"
+            android:layout_column="7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd8"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <!--END LINE 4 -->
+
+        <!--START GOEALKEEPERS -->
+
+        <TextView
+            android:layout_row="6"
+            android:layout_column="4"
+            android:layout_columnSpan="2"
+            android:textColor="@color/colorLine"
+            android:textSize="25dp"
+            android:text="@string/goalkeeperstext"
+            android:layout_gravity="bottom|center_horizontal" />
+
+        <Button
+            android:text="GK1"
+            android:layout_row="7"
+            android:layout_column="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playergk1"
+            android:padding="20dp"
+            android:textSize="50sp" />
+
+
+
+        <Button
+            android:text="GK1"
+            android:layout_row="7"
+            android:layout_column="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playergk2"
+            android:padding="20dp"
+            android:textSize="50sp" />
+
+
+
+        <!--END GOEALKEEPERS -->
+
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/colorLine"
+            android:layout_row="1"
+            android:layout_column="9"
+            android:layout_rowSpan="8"
+            android:layout_gravity="bottom|center_horizontal" />
+
+
+        <!--BEGIN EXTRAS -->
+        <TextView
+            android:layout_row="1"
+            android:layout_column="10"
+            android:layout_columnSpan="2"
+            android:textColor="@color/colorLine"
+            android:textSize="25dp"
+            android:text="@string/extras"
+            android:paddingLeft="15dp" />
+
+        <Button
+            android:text="EX1"
+            android:layout_row="2"
+            android:layout_column="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerex1"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="EX1"
+            android:layout_row="3"
+            android:layout_column="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerex2"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="EX1"
+            android:layout_row="6"
+            android:layout_column="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerex3"
+            android:padding="20dp"
+            android:textSize="50sp" />
+        <Button
+            android:text="EX1"
+            android:layout_row="7"
+            android:layout_column="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerex4"
+            android:padding="20dp"
+            android:textSize="50sp" />
+
+
+    </GridLayout>
+</FrameLayout>

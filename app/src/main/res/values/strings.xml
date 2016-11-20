@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">OIO</string>
+
+    <string name="title_activity_hometeam">HOME TEAM</string>
+    <string name="title_activity_visitorteam">VISITOR TEAM</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="backtostart">Back to START</string>
+    <string name="recordlines">RECORD Line State</string>
+    <string name="spaces">   </string>
+    <string name="firstline">Line 1</string>
+    <string name="secondline">Line 2</string>
+    <string name="thirdline">Line 3</string>
+    <string name="fourthline">Line 4</string>
+    <string name="goalkeeperstext">Goalkeepers</string>
+    <string name="extras">Extras</string>
+    <string name="toomanyselected"># on ice</string>
+    <string name="playersselected"> PLAYERS SELECTED</string>
+</resources>

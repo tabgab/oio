@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+
+    <dimen name="plbuttonw">130dp</dimen>
+    <dimen name="lbuttonw">365dp</dimen>
+    <dimen name="backbuttonw">200dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+
+
+</resources>

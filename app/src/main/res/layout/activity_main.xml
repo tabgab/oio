@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.anoniq.gabort.oio.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Off Ice Official Line Tracker"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/title1"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+    <Button
+        android:text="VISITOR TEAM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginStart="13dp"
+        android:id="@+id/button2"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+    <TextView
+        android:text="Enter URL for game sheet here:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textUri"
+        android:text="http://www.regi.icehockey.hu/magyar/jkmol.php?mit=24795"
+        android:ems="10"
+        android:id="@+id/editTextGameSheetURL"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="HOME TEAM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+    <Button
+        android:text="Populate Database"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/populatebutton"
+        android:layout_below="@+id/editTextGameSheetURL"
+        android:layout_alignParentStart="true"
+        android:hint="Press this button to fetch match data."
+        android:onClick="PopulateDatabase();" />
+
+    <TextView
+        android:text="Event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/populatebutton"
+        android:layout_alignParentStart="true"
+        android:id="@+id/eventtext"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventtext"
+        android:layout_alignParentStart="true"
+        android:id="@+id/venuetext"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Teams Playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/venuetext"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewTeams"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
