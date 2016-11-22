@@ -14,22 +14,42 @@
             android:orientation="horizontal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
+            android:name=".VisitorTeamActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+
+            android:label="@string/title_activity_visitorteam"
+            android:orientation="horizontal">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.OPENABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".VisitorTeamActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+
+            android:label="@string/title_activity_visitorteam"
+            android:orientation="horizontal">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.OPENABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".TestActivity1"> </activity>
+        <activity
             android:name=".HomeTeamActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_hometeam"
-            android:orientation="horizontal"></activity>
-        <activity
-            android:name=".VisitorTeamActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="true"
-            android:label="@string/title_activity_visitorteam"
-            android:orientation="horizontal"></activity>
-        <activity android:name=".TestActivity1"></activity>
+            android:orientation="horizontal"> </activity>
+
     </application>
 
 </manifest>

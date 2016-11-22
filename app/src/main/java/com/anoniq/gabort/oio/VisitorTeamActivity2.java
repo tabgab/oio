@@ -4,18 +4,19 @@ package com.anoniq.gabort.oio;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
-
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class VisitorTeamActivity extends AppCompatActivity {
+import org.w3c.dom.Text;
+
+public class VisitorTeamActivity2 extends AppCompatActivity {
    public static Integer numberofplayersonice=0; //This keeps track of how many buttons are selected.
+    public String[] currentLine = new String[7]; // This is where the text equivalent of selected players on ice will be stored.
 
     private static Integer incnumplayers(Integer increment) {
             numberofplayersonice = numberofplayersonice+increment;
@@ -40,13 +41,15 @@ public class VisitorTeamActivity extends AppCompatActivity {
     }
 
     public void numPlayersTextUpdate (String myStrg){
-        TextView t = (TextView)findViewById(R.id.toomanytext);
+        TextView t;
+        //TODO How the fuck do I change the text of the TextView with id "toomanytext"?
+        t = (TextView)findViewById(R.id.toomanytext);
         t.setText(myStrg);
 
     }
 
     public void setPlayersTextRed()  {
-        findViewById(R.id.toomanytext).setBackgroundColor(Color.parseColor("#FF00FF"));
+        findViewById(R.id.toomanytext).setBackgroundColor(Color.parseColor("#FF0000"));
     }
 
     public void setPlayersTextGreen()  {
@@ -73,12 +76,7 @@ public class VisitorTeamActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                // Listen for errors
-
-
-
-
-
+                // Listen for errors // TODO Listen for errors?
 
                 //get the input from the user
                 String jsy = input.getText().toString();
@@ -104,7 +102,7 @@ public class VisitorTeamActivity extends AppCompatActivity {
         if (pbtn.isOnIce()){
             pbtn.setSelected(false);
             pbtn.playerisonice = false;
-            VisitorTeamActivity.decnumplayers(1);
+            VisitorTeamActivity2.decnumplayers(1);
             if (numberofplayersonice <= 6) setPlayersTextGreen();
             if (numberofplayersonice > 6) setPlayersTextRed();
             String updStrg = numberofplayersonice.toString();
@@ -113,7 +111,7 @@ public class VisitorTeamActivity extends AppCompatActivity {
         else {
             pbtn.setSelected(true);
             pbtn.playerisonice = true;
-            VisitorTeamActivity.incnumplayers(1);
+            VisitorTeamActivity2.incnumplayers(1);
             if (numberofplayersonice <= 6) setPlayersTextGreen();
             if (numberofplayersonice > 6) setPlayersTextRed();
             String updStrg = numberofplayersonice.toString();
@@ -121,11 +119,27 @@ public class VisitorTeamActivity extends AppCompatActivity {
 
         }
     }
+    private String initCurrentLine() {
+        // Fill the String array currentLine[] with empty content initially.
+        // This array should eventually hold the numbers of players in the ice.
+        String t="";
+        for (int i = 0; i < currentLine.length; i++){
+            currentLine[i] = "  ";
+            t= t+currentLine[i]+",";
+            }
+        return t;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_visitor_team);
+
+        setContentView(R.layout.activity_visitor_team2);
+
+        // Initialize the players on the ice text
+        TextView players = (TextView)findViewById(R.id.textView4);
+        players.setText(initCurrentLine());
 
 
         Button goBackHome = (Button)findViewById(R.id.gobackhome);
@@ -501,7 +515,12 @@ public class VisitorTeamActivity extends AppCompatActivity {
         });
 
 
-    }}
+        }
+    }
+
+
+
+
 
 
 

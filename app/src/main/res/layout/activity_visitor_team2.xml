@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#222222"
-    android:id="@+id/activity_visitor_team"
-    tools:context="com.anoniq.gabort.oio.VisitorTeamActivity">
+    android:id="@+id/activity_visitor_team2"
+    tools:context="com.anoniq.gabort.oio.VisitorTeamActivity2">
 
 
 
@@ -54,271 +54,271 @@
             android:layout_marginEnd="8dp"
             />
 
-            <!--START LINE 1-->
-            <Button
-                android:layout_width="wrap_content"
-                android:id="@+id/lineonebutton"
-                android:textColor="@color/colorLine"
-                android:textSize="@dimen/buttontxtsize"
-                android:text="@string/firstline"
-                android:paddingLeft="15dp"
-                android:hapticFeedbackEnabled="true"
-                android:background="@drawable/custom_button"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/gobackhome"/>
+        <!--START LINE 1-->
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/lineonebutton"
+            android:textColor="@color/colorLine"
+            android:textSize="@dimen/buttontxtsize"
+            android:text="@string/firstline"
+            android:paddingLeft="15dp"
+            android:hapticFeedbackEnabled="true"
+            android:background="@drawable/custom_button"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/gobackhome"/>
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="F1.1"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/playerf1"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:state_selected="false"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/lineonebutton" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="F1.1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/playerf1"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:state_selected="false"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/lineonebutton" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f1.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf2"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toRightOf="@+id/playerf1"
-                app:layout_constraintTop_toBottomOf="@+id/lineonebutton" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f1.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf2"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toRightOf="@+id/playerf1"
+            app:layout_constraintTop_toBottomOf="@+id/lineonebutton" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f1.3"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/playerf3"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f1.3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/playerf3"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
 
-                app:layout_constraintLeft_toRightOf="@+id/playerf2"
-                app:layout_constraintTop_toBottomOf="@+id/lineonebutton" />
+            app:layout_constraintLeft_toRightOf="@+id/playerf2"
+            app:layout_constraintTop_toBottomOf="@+id/lineonebutton" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="d1.1"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/playerd1"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/playerf1" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="d1.1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/playerd1"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/playerf1" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="d1.2"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/playerd2"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintTop_toBottomOf="@+id/playerf2"
-                app:layout_constraintLeft_toRightOf="@+id/playerd1" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="d1.2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/playerd2"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toBottomOf="@+id/playerf2"
+            app:layout_constraintLeft_toRightOf="@+id/playerd1" />
 
-            <!--END LINE 1-->
+        <!--END LINE 1-->
 
-            <!--START LINE 2-->
-
-
-            <Button
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/linetwobutton"
-                android:textColor="@color/colorLine"
-                android:textSize="@dimen/buttontxtsize"
-                android:text="@string/secondline"
-                android:hapticFeedbackEnabled="true"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/guideline"
-                android:layout_marginTop="40dp"
-                app:layout_constraintTop_toBottomOf="@+id/playerd2" />
-
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f2.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf4"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/linetwobutton" />
-
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f2.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf5"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toRightOf="@+id/playerf4"
-                app:layout_constraintTop_toBottomOf="@+id/linetwobutton" />
+        <!--START LINE 2-->
 
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f2.3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf6"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toRightOf="@+id/playerf5"
-                app:layout_constraintTop_toBottomOf="@+id/linetwobutton" />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/linetwobutton"
+            android:textColor="@color/colorLine"
+            android:textSize="@dimen/buttontxtsize"
+            android:text="@string/secondline"
+            android:hapticFeedbackEnabled="true"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/playerd2" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="d2.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerd3"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintTop_toBottomOf="@+id/playerf5"
-                app:layout_constraintLeft_toLeftOf="@+id/playerf4" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f2.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf4"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/linetwobutton" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="d2.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerd4"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/playerf5"
-                app:layout_constraintTop_toBottomOf="@+id/playerf5"/>
-            <!--END LINE 2-->
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f2.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf5"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toRightOf="@+id/playerf4"
+            app:layout_constraintTop_toBottomOf="@+id/linetwobutton" />
 
 
-            <!--START LINE 3 -->
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f2.3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf6"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toRightOf="@+id/playerf5"
+            app:layout_constraintTop_toBottomOf="@+id/linetwobutton" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:id="@+id/linethreebutton"
-                android:textColor="@color/colorLine"
-                android:textSize="@dimen/buttontxtsize"
-                android:text="@string/thirdline"
-                android:padding="@dimen/buttonpadding"
-                android:hapticFeedbackEnabled="true"
-                android:background="@drawable/custom_button"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toRightOf="@+id/textView4"
-                app:layout_constraintTop_toTopOf="@+id/lineonebutton"/>
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="d2.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd3"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toBottomOf="@+id/playerf5"
+            app:layout_constraintLeft_toLeftOf="@+id/playerf4" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f3.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf7"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/linethreebutton"
-                app:layout_constraintTop_toBottomOf="@+id/linethreebutton"/>
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="d2.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd4"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toLeftOf="@+id/playerf5"
+            app:layout_constraintTop_toBottomOf="@+id/playerf5"/>
+        <!--END LINE 2-->
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f3.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf8"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toRightOf="@+id/playerf7"
-                app:layout_constraintTop_toBottomOf="@+id/linethreebutton" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f3.3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf9"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toRightOf="@+id/playerf8"
-                app:layout_constraintTop_toBottomOf="@+id/linethreebutton" />
+        <!--START LINE 3 -->
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="d3.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerd5"
-                android:padding="20dp"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/playerf7"
-                app:layout_constraintTop_toBottomOf="@+id/playerf7"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/linethreebutton"
+            android:textColor="@color/colorLine"
+            android:textSize="@dimen/buttontxtsize"
+            android:text="@string/thirdline"
+            android:padding="@dimen/buttonpadding"
+            android:hapticFeedbackEnabled="true"
+            android:background="@drawable/custom_button"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/lineonebutton"/>
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="d3.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerd6"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintTop_toBottomOf="@+id/playerf7"
-                app:layout_constraintLeft_toRightOf="@+id/playerd5" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f3.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf7"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintRight_toLeftOf="@id/playerf8"
+            app:layout_constraintTop_toBottomOf="@+id/linethreebutton"/>
 
-            <!--END LINE 3-->
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f3.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf8"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintRight_toLeftOf="@id/playerf9"
+            app:layout_constraintTop_toBottomOf="@+id/linethreebutton" />
 
-            <!--START LINE 4 -->
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f3.3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf9"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintRight_toLeftOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/linethreebutton" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:id="@+id/linefourbutton"
-                android:textColor="@color/colorLine"
-                android:textSize="@dimen/buttontxtsize"
-                android:text="@string/fourthline"
-                android:hapticFeedbackEnabled="true"
-                android:background="@drawable/custom_button"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toRightOf="@+id/textView4"
-                app:layout_constraintTop_toTopOf="@+id/linetwobutton" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="d3.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd5"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toLeftOf="@+id/playerf7"
+            app:layout_constraintTop_toBottomOf="@+id/playerf7"/>
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f4.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf10"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/linefourbutton"
-                app:layout_constraintTop_toBottomOf="@+id/linefourbutton" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="d3.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd6"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toBottomOf="@+id/playerf7"
+            app:layout_constraintLeft_toRightOf="@+id/playerd5" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f4.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf11"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintTop_toBottomOf="@+id/linefourbutton"
-                app:layout_constraintLeft_toRightOf="@+id/playerf10"/>
+        <!--END LINE 3-->
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="f4.3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerf12"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toRightOf="@+id/playerf11"
-                app:layout_constraintTop_toBottomOf="@+id/linefourbutton" />
+        <!--START LINE 4 -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/linefourbutton"
+            android:textColor="@color/colorLine"
+            android:textSize="@dimen/buttontxtsize"
+            android:text="@string/fourthline"
+            android:hapticFeedbackEnabled="true"
+            android:background="@drawable/custom_button"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/linetwobutton" />
+
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f4.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf10"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintRight_toLeftOf="@+id/playerf11"
+            app:layout_constraintTop_toBottomOf="@+id/linefourbutton" />
+
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f4.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf11"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toBottomOf="@+id/linefourbutton"
+            app:layout_constraintRight_toLeftOf="@+id/playerf12"/>
+
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="f4.3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerf12"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintRight_toLeftOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/linefourbutton" />
 
         <com.anoniq.gabort.oio.PlayerButton
             android:text="d4.1"
@@ -328,149 +328,154 @@
             android:padding="@dimen/buttonpadding"
             android:textSize="@dimen/buttontxtsize"
             android:background="@drawable/custom_button"
-            app:layout_constraintLeft_toLeftOf="@+id/linefourbutton"
+            app:layout_constraintRight_toLeftOf="@id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/playerf11" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="d4.2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerd7"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toRightOf="@+id/playerd8"
-                app:layout_constraintTop_toBottomOf="@+id/playerf10" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="d4.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerd7"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintRight_toLeftOf="@+id/playerd8"
+            app:layout_constraintTop_toBottomOf="@+id/playerf10" />
 
 
-            <!--END LINE 4 -->
+        <!--END LINE 4 -->
 
-            <!--START GOEALKEEPERS -->
+        <!--START GOEALKEEPERS -->
 
-            <TextView
-                android:textColor="@color/colorLine"
-                android:textSize="@dimen/buttontxtsize"
-                android:text="@string/goalkeeperstext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView5"
-                app:layout_constraintLeft_toRightOf="@+id/playerf6"
-                app:layout_constraintTop_toTopOf="@+id/linetwobutton"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp" />
+        <TextView
+            android:textColor="@color/colorLine"
+            android:textSize="@dimen/buttontxtsize"
+            android:text="@string/goalkeeperstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/linetwobutton"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="GK1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playergk1"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:hapticFeedbackEnabled="true"
-                android:background="@drawable/custom_button"
-                app:layout_constraintLeft_toLeftOf="@+id/textView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                android:layout_marginStart="10dp" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="GK1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playergk1"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:hapticFeedbackEnabled="true"
+            android:background="@drawable/custom_button"
+            app:layout_constraintLeft_toLeftOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            android:layout_marginStart="10dp" />
 
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="GK2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playergk2"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:hapticFeedbackEnabled="true"
-                android:background="@drawable/custom_button"
-                app:layout_constraintTop_toBottomOf="@+id/playergk1"
-                app:layout_constraintLeft_toLeftOf="@+id/playergk1" />
-
-
-            <!--END GOEALKEEPERS -->
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="GK2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playergk2"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:hapticFeedbackEnabled="true"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toBottomOf="@+id/playergk1"
+            app:layout_constraintLeft_toLeftOf="@+id/playergk1" />
 
 
-
-            <!--BEGIN EXTRAS -->
-            <TextView
-                android:textColor="@color/colorLine"
-                android:id="@+id/extrastext"
-                android:textSize="@dimen/buttontxtsize"
-                android:text="@string/extras"
-                android:padding="@dimen/buttonpadding"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/playerd4"
-                app:layout_constraintLeft_toLeftOf="@+id/playerd4"
-                android:layout_marginTop="10dp"
-                 />
-
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="EX1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerex1"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintTop_toBottomOf="@+id/extrastext"
-                app:layout_constraintLeft_toRightOf="@+id/extrastext"
-                 />
-
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="EX2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerex2"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintTop_toBottomOf="@+id/extrastext"
-                app:layout_constraintLeft_toRightOf="@+id/playerex1"
-                 />
-
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="EX3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerex3"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintTop_toBottomOf="@+id/extrastext"
-                app:layout_constraintLeft_toRightOf="@+id/playerex2"
-                 />
-
-            <com.anoniq.gabort.oio.PlayerButton
-                android:text="EX4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/playerex4"
-                android:padding="@dimen/buttonpadding"
-                android:textSize="@dimen/buttontxtsize"
-                android:background="@drawable/custom_button"
-                app:layout_constraintTop_toBottomOf="@+id/extrastext"
-                app:layout_constraintLeft_toRightOf="@+id/playerex3"
-                />
+        <!--END GOEALKEEPERS -->
 
 
 
+        <!--BEGIN EXTRAS -->
+        <TextView
+            android:textColor="@color/colorLine"
+            android:id="@+id/extrastext"
+            android:textSize="@dimen/buttontxtsize"
+            android:text="@string/extras"
+            android:padding="@dimen/buttonpadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/playerd4"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline3"
+            android:layout_marginTop="10dp"
+            />
 
-            <android.support.constraint.Guideline
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/guideline"
-                app:layout_constraintGuide_percent="0.02"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteY="0dp"
-                tools:layout_editor_absoluteX="14dp" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="EX1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerex1"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toBottomOf="@+id/extrastext"
+            app:layout_constraintRight_toLeftOf="@+id/playerex2"
+            />
 
-            <android.support.constraint.Guideline
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/guideline2"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.98"
-                tools:layout_editor_absoluteY="0dp"
-                tools:layout_editor_absoluteX="669dp" />
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="EX2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerex2"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toBottomOf="@+id/extrastext"
+            app:layout_constraintRight_toLeftOf="@+id/playerex3"
+            />
+
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="EX3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerex3"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toBottomOf="@+id/extrastext"
+            app:layout_constraintRight_toRightOf="@+id/extrastext"
+            />
+
+        <com.anoniq.gabort.oio.PlayerButton
+            android:text="EX4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerex4"
+            android:padding="@dimen/buttonpadding"
+            android:textSize="@dimen/buttontxtsize"
+            android:background="@drawable/custom_button"
+            app:layout_constraintTop_toBottomOf="@+id/extrastext"
+            app:layout_constraintLeft_toRightOf="@+id/playerex3"
+            />
+
+
+
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            app:layout_constraintGuide_percent="0.02"
+            android:orientation="vertical"
+            />
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline2"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98"
+            />
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline3"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45"
+            />
 
 
 
@@ -485,8 +490,8 @@
             android:background="@color/highlighted_text_material_dark"
             android:id="@+id/textView4"
             android:gravity="center"
-            app:layout_constraintLeft_toRightOf="@+id/playerf3"
-            app:layout_constraintTop_toTopOf="@+id/lineonebutton"/>
+            app:layout_constraintLeft_toLeftOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/playerf1"/>
 
 
 

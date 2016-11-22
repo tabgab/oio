@@ -10,7 +10,7 @@
     <dimen name="activity_vertical_margin">10dp</dimen>
     <dimen name="activity_horizontal_margin">10dp</dimen>
     <dimen name="test_text_size">25dp</dimen>
-    <dimen name="buttontxtsize">20dp</dimen>
+    <dimen name="buttontxtsize">25dp</dimen>
     <dimen name="toomanytextsize">30dp</dimen>
     <dimen name="buttonpadding">15dp</dimen>
 

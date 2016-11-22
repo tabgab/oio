@@ -49,16 +49,6 @@ public class PlayerButton extends Button{
     }
 
     public boolean isOnIce() {
-        /*TypedArray a = getContext().obtainStyledAttributes(R.styleable.player_Button);
-        String icestatus = a.getString(R.styleable.player_Button_onice);
-        if (playerisonice==true) {
-            a.recycle();
-            return true;
-        }
-        else {
-            a.recycle();
-            return false;
-        }*/
         return playerisonice;
 
     }

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         visitorteambutton.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this, VisitorTeamActivity.class);
+                Intent intent = new Intent(MainActivity.this, VisitorTeamActivity2.class);
                 startActivity(intent);
             }
 
