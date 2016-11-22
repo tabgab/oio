@@ -16,4 +16,8 @@
     <string name="extras">Extras</string>
     <string name="toomanyselected"># on ice</string>
     <string name="playersselected"> PLAYERS SELECTED</string>
+    <string name="ok">OK</string>
+    <string name="calcel">CANCEL</string>
+    <string name="jerseynumbereditor">Jersey number Editor</string>
+
 </resources>

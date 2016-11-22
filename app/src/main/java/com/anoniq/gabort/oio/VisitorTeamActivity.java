@@ -1,11 +1,18 @@
 package com.anoniq.gabort.oio;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
+import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -13,6 +20,14 @@ import org.w3c.dom.Text;
 
 public class VisitorTeamActivity extends AppCompatActivity {
    public static Integer numberofplayersonice=0; //This keeps track of how many buttons are selected.
+
+
+    //DisplayMetrics display = this.getResources().getDisplayMetrics();
+
+    //int display_width = display.widthPixels;
+    //int display_height = display.heightPixels;
+    //int btnWidth = (int)(display_width*0.1);  // Use this to scale the width of buttons dynamically on diff. devices.
+
 
     private static Integer incnumplayers(Integer increment) {
             numberofplayersonice = numberofplayersonice+increment;
@@ -50,6 +65,43 @@ public class VisitorTeamActivity extends AppCompatActivity {
 
     public void setPlayersTextGreen()  {
         findViewById(R.id.toomanytext).setBackgroundColor(Color.parseColor("#00FF00"));
+    }
+
+
+    public void editButtonText(final Button b){
+
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.jerseynumbereditor);
+
+        // Set up the input
+        final EditText input = new EditText(this);
+        // Specify the type of input expected;
+        input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_NORMAL);
+        builder.setView(input);
+
+        // Set up the buttons
+        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String jsy = input.getText().toString();
+                if (jsy.equals("")){
+                    input.setError("Entry is wrong or empty. Enter numbers only.");
+
+                }
+                else{
+                    b.setText(jsy);
+                }
+            }
+        });
+        builder.setNegativeButton(R.string.calcel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
     }
 
     public void pressMe(PlayerButton pbtn){
@@ -94,6 +146,12 @@ public class VisitorTeamActivity extends AppCompatActivity {
             public void onClick(View v){
                 pressMe(pf1);
             }
+        });
+        pf1.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View v) {
+                editButtonText(pf1);
+                return true;}
         });
 
         final PlayerButton pf2 = (PlayerButton)findViewById(R.id.playerf2);

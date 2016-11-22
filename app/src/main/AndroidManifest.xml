@@ -22,16 +22,14 @@
             android:name=".HomeTeamActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_hometeam"
-            android:orientation="horizontal"
-            >
-        </activity>
-
-        <activity android:name=".VisitorTeamActivity"
-            android:exported ="true"
+            android:orientation="horizontal"></activity>
+        <activity
+            android:name=".VisitorTeamActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
             android:label="@string/title_activity_visitorteam"
-            android:orientation="horizontal" >
-        </activity>
+            android:orientation="horizontal"></activity>
+        <activity android:name=".TestActivity1"></activity>
     </application>
 
 </manifest>
