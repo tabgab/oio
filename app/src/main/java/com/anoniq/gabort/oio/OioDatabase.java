@@ -1,3 +1,4 @@
+/*
 package com.anoniq.gabort.oio;
 
 import android.content.ContentValues;
@@ -8,9 +9,11 @@ import android.provider.BaseColumns;
 import android.text.GetChars;
 
 
+*/
 /**
  * Created by gabort on 11/23/2016.
- */
+ *//*
+
 
 public final class OioDatabase {
 
@@ -18,7 +21,9 @@ public final class OioDatabase {
     // make the constructor private.
     private void OioDatabaseContract() {
     }
-    /* Inner class that defines the table contents */
+    */
+/* Inner class that defines the table contents *//*
+
     public static class OioDatabaseEntry implements BaseColumns {
         public static final String TABLE_NAME = "playerList";
         public static final String COLUMN_NAME_BUTTON_NUMBER = "btn_number";
@@ -69,7 +74,10 @@ public final class OioDatabase {
         // String data holds the jersey number of the player for that button.
 
         // Gets the data repository in write mode
-        SQLiteDatabase db = OioDbHelper.getWritableDatabase();
+
+        //TODO for some reason this shit stops the build.
+        SQLiteDatabase db;
+        db = OioDbHelper.getWritableDatabase();
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
@@ -117,3 +125,4 @@ public final class OioDatabase {
 
 
 
+*/

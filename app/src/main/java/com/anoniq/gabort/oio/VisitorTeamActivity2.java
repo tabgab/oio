@@ -2,6 +2,7 @@ package com.anoniq.gabort.oio;
 
 
 import android.app.AlertDialog;
+import android.app.Application;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,7 +13,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.anoniq.gabort.oio.player.Player;
+import com.anoniq.gabort.oio.OioApplication;
+
 import org.w3c.dom.Text;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class VisitorTeamActivity2 extends AppCompatActivity {
    public static Integer numberofplayersonice=0; //This keeps track of how many buttons are selected.
@@ -32,6 +39,9 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
             }
     }
 
+
+    public ArrayList<Player> visitorRoster = new ArrayList<>();
+
     public Integer getnumplayers() {
             return this.numberofplayersonice;
         }
@@ -42,7 +52,6 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
 
     public void numPlayersTextUpdate (String myStrg){
         TextView t;
-        //TODO How the fuck do I change the text of the TextView with id "toomanytext"?
         t = (TextView)findViewById(R.id.toomanytext);
         t.setText(myStrg);
 
@@ -59,7 +68,6 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
 
     public void editButtonText(final Button b){
 
-
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.jerseynumbereditor);
 
@@ -68,8 +76,6 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
         // Specify the type of input expected;
         input.setInputType(InputType.TYPE_CLASS_NUMBER);
         builder.setView(input);
-
-
 
         // Set up the buttons
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
@@ -82,6 +88,7 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
                 String jsy = input.getText().toString();
                 if (jsy.equals("")){
                     input.setError("Entry is wrong or empty. Enter numbers only.");
+                    dialog.cancel();
                 }
                 else{
                     b.setText(jsy);
@@ -94,11 +101,12 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
                 dialog.cancel();
             }
         });
-
+        builder.create();
         builder.show();
     }
 
     public void pressMe(PlayerButton pbtn){
+        OioApplication app = (OioApplication) getApplication();
         if (pbtn.isOnIce()){
             pbtn.setSelected(false);
             pbtn.playerisonice = false;
@@ -107,6 +115,28 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
             if (numberofplayersonice > 6) setPlayersTextRed();
             String updStrg = numberofplayersonice.toString();
             numPlayersTextUpdate(updStrg);
+            // and also update the roster for the VISITOR team
+            //TODO take care to change this for the home team activity!!!
+            String jerseyText = pbtn.getText().toString();
+            app.visitorRoster.get(pbtn.getButtonIndexForPlayerArray()).setPlayerJerseyNumberStr(jerseyText);//Find the player associated with the index of this button and change its text.
+
+            app.visitorRoster.get(pbtn.getButtonIndexForPlayerArray()).setPlayerIsOnIce(false); //Find the player associated with the index of this button and set it on ice.
+
+            // Update the text showing which players are on ice in the UI
+            ArrayList<String> jersnums = (ArrayList<String>) app.getAllJerseysOnIceVisitor();//Get all the jersey numbers on ice.
+            String alljerseysonice = ""; // Make sure its empty first.
+            // Concatenate the whole thing into a single string.
+            for (int n = 0; n < jersnums.size(); n++) {
+                alljerseysonice = alljerseysonice + jersnums.get(n) + ",";
+            }
+            //Update textView4 which displays this on screen.
+            TextView t = (TextView) findViewById(R.id.textView4);
+            t.setText(alljerseysonice);
+
+
+
+
+
         }
         else {
             pbtn.setSelected(true);
@@ -116,12 +146,34 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
             if (numberofplayersonice > 6) setPlayersTextRed();
             String updStrg = numberofplayersonice.toString();
             numPlayersTextUpdate(updStrg);
+            // and also update the roster for the VISITOR team
+            //TODO take care to change this for the home team activity!!!
+            // Update the Player object locally.
+            String jerseyText = pbtn.getText().toString();
+            //TODO CHANGE LINES BELOW TO INDEX REF. or FAILS !!!
 
+            // TODO get index of player with jerseynumber jerseyText
+            app.visitorRoster.get(pbtn.getButtonIndexForPlayerArray()).setPlayerJerseyNumberStr(jerseyText);//Find the player associated with the index of this button and change its text.
+
+            app.visitorRoster.get(pbtn.getButtonIndexForPlayerArray()).setPlayerIsOnIce(true); //Find the player assciated with the index of this button and set it on ice.
+
+            // Update the text showing which players are on ice in the UI
+            ArrayList<String> jersnums = (ArrayList<String>) app.getAllJerseysOnIceVisitor();//Get all the jersey numbers on ice.
+            String alljerseysonice = ""; // Make sure its empty first.
+            // Concatenate the whole thing into a single string.
+            for (int n = 0; n < jersnums.size(); n++) {
+                alljerseysonice = alljerseysonice + jersnums.get(n) + ",";
+            }
+            //Update textView4 which displays this on screen.
+            TextView t = (TextView) findViewById(R.id.textView4);
+            t.setText(alljerseysonice);
         }
     }
     private String initCurrentLine() {
         // Fill the String array currentLine[] with empty content initially.
         // This array should eventually hold the numbers of players in the ice.
+
+        //TODO or you could simply browse the ArrayList visitorRoster and find the players that are on ice.
         String t="";
         for (int i = 0; i < currentLine.length; i++){
             currentLine[i] = "  ";
@@ -137,12 +189,129 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
 
         setContentView(R.layout.activity_visitor_team2);
 
+        //final ArrayList<Player> myRoster = setupLocalCopyOfVisitorRoster(visitorRoster); // get the numbers and positions from the visitorTeamRoster into a local object.
+
         // Initialize the players on the ice text
         TextView players = (TextView)findViewById(R.id.textView4);
-        players.setText(initCurrentLine());
+        players.setText(initCurrentLine()); // fill the text field tracking players on ice with blanks initially.
+
+        OioApplication app = (OioApplication) getApplication();
+        //setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf1),0);
+        //setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf2),1);
+
+        for (Integer i = 0; i <= app.visitorRoster.size(); i++) { //TODO -1 or not?
+            switch (i) {
+                case 0:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf1), i);
+                    break;
+
+                case 1:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf2), i);
+                    break;
+
+                case 2:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf3), i);
+                    break;
+
+                case 3:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerd1), i);
+                    break;
+
+                case 4:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerd2), i);
+                    break;
+
+                case 5:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf4), i);
+                    break;
+
+                case 6:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf5), i);
+                    break;
+
+                case 7:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf6), i);
+                    break;
+
+                case 8:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerd3), i);
+                    break;
+
+                case 9:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerd4), i);
+                    break;
+
+                case 10:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf7), i);
+                    break;
+
+                case 11:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf8), i);
+                    break;
+
+                case 12:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf9), i);
+                    break;
+
+                case 13:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerd5), i);
+                    break;
+
+                case 14:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerd6), i);
+                    break;
+
+                case 15:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf10), i);
+                    break;
+
+                case 16:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf11), i);
+                    break;
+
+                case 17:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf12), i);
+                    break;
+
+                case 18:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerd7), i);
+                    break;
+
+                case 19:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerd8), i);
+                    break;
+
+                case 20:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerex1), i);
+                    break;
+
+                case 21:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerex2), i);
+                    break;
+
+                case 23:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerex3), i);
+                    break;
+
+                case 24:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerex4), i);
+                    break;
+
+                case 25:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playergk1), i);
+                    break;
+
+                case 26:
+                    setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playergk2), i);
+                    break;
+
+                default:
+                    break;
+            }
+        }
 
 
-        Button goBackHome = (Button)findViewById(R.id.gobackhome);
+        Button goBackHome = (Button) findViewById(R.id.gobackhome); // A long press will get you back to the MAIN Activity, removing this.
         goBackHome.setOnLongClickListener(new View.OnLongClickListener(){
             @Override
             public boolean onLongClick(View v) {
@@ -153,13 +322,13 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
         final PlayerButton pf1 = (PlayerButton)findViewById(R.id.playerf1);
         pf1.setOnClickListener(new View.OnClickListener(){
 
-            public void onClick(View v){
+            public void onClick(View v) { // Short click: add or remove from ice (select)
                 pressMe(pf1);
             }
         });
         pf1.setOnLongClickListener(new View.OnLongClickListener(){
             @Override
-            public boolean onLongClick(View v) {
+            public boolean onLongClick(View v) { // Long click: Edit jersey number associated with button. //TODO CHECKS!!! AVOID DUPLICATEST, ETC.
                 editButtonText(pf1);
                 return true;}
         });
@@ -513,10 +682,24 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
                 editButtonText(pgk2);
                 return true;}
         });
-
-
-        }
     }
+
+    private void setInitialButtonPropertiesFromArrayList(PlayerButton b, Integer index) {
+        OioApplication app = (OioApplication) getApplication();
+        b.setText(app.visitorRoster.get(index).playerJerseyNumber);
+        b.buttonIndexForPlayerArray = index;
+        //This is important, because the index of the button specifies the position of the player in the
+        //Arraylist<Player> visitorRoster. If the information is updated, we can use this to access the Array.
+    }
+
+/*    private ArrayList<Player> setupLocalCopyOfVisitorRoster(ArrayList<Player> myRoster) {
+       Integer listlength = visitorRoster.size();
+        for (Integer i=0; i<=listlength; i++){
+            myRoster.add (visitorRoster.get(i));
+        }
+        return myRoster;
+    }*/
+}
 
 
 

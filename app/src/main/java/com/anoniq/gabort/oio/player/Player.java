@@ -8,17 +8,17 @@ package com.anoniq.gabort.oio.player;
  */
 public class Player {
 
-    private String playerJerseyNumber;
-    private Integer playerLine;
-    private boolean playerIsOnIce;
-    private Integer jerseynum;
+    public String playerJerseyNumber;
+    public Integer playerLine;
+    public boolean playerIsOnIce;
+    public Integer jerseynum;
 
     public void setPlayerJerseyNumber (Integer jerseynum) {
-        this.jerseynum.toString()=playerJerseyNumber;
+        this.playerJerseyNumber = Integer.toString(jerseynum);
         this.jerseynum = jerseynum;
     }
 
-    public void setPlayerJerseyNumber (String playerJerseyNumber) {
+    public void setPlayerJerseyNumberStr(String playerJerseyNumber) {
         this.playerJerseyNumber = playerJerseyNumber;
         this.jerseynum = Integer.valueOf(playerJerseyNumber);
     }
@@ -41,12 +41,20 @@ public class Player {
         return false; // TODO Change this to the actual method!!!
     }
 
-    public String toString() {
+    public void setPlayerIsOnIce(boolean b) {
+        this.playerIsOnIce = b;
+    }
+
+    public void setPlayerLine(Integer i) {
+        this.playerLine = i;
+    }
+
+    /*public String toString() {
         if (this.playerIsOnIce){
         return playerJerseyNumber + "from Line" + playerLine.toString() + "is on ice.";}
         else{
             return playerJerseyNumber + "from Line" + playerLine.toString() + "is not on ice.";
         }
-    }
+    }*/
 }
 
