@@ -31,12 +31,12 @@ public class Player {
         return jerseynum;
     }
 
-    public boolean isPlayerIsOnIce (Integer jerseynum){
+    public boolean getPlayerIsOnIce(Integer jerseynum) {
         //Check if the player with the "jerseynum" jersey number is on ice or not.
         return false; // TODO Change this to the actual method!!!
     }
 
-    public boolean isPlayerIsOnIce (String playerJerseyNumber){
+    public boolean getPlayerIsOnIce(String playerJerseyNumber) {
         //Check if the player with the "playerJerseyNumber" jersey number is on ice or not.
         return false; // TODO Change this to the actual method!!!
     }
@@ -49,12 +49,10 @@ public class Player {
         this.playerLine = i;
     }
 
-    /*public String toString() {
-        if (this.playerIsOnIce){
-        return playerJerseyNumber + "from Line" + playerLine.toString() + "is on ice.";}
-        else{
-            return playerJerseyNumber + "from Line" + playerLine.toString() + "is not on ice.";
-        }
-    }*/
+    public Integer getPlayerLine() {
+        return this.playerLine;
+    }
+
+
 }
 

@@ -132,11 +132,6 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
             //Update textView4 which displays this on screen.
             TextView t = (TextView) findViewById(R.id.textView4);
             t.setText(alljerseysonice);
-
-
-
-
-
         }
         else {
             pbtn.setSelected(true);
@@ -199,7 +194,7 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
         //setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf1),0);
         //setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf2),1);
 
-        for (Integer i = 0; i <= app.visitorRoster.size(); i++) { //TODO -1 or not?
+        for (Integer i = 0; i <= app.visitorRoster.size(); i++) {
             switch (i) {
                 case 0:
                     setInitialButtonPropertiesFromArrayList((PlayerButton) findViewById(R.id.playerf1), i);
@@ -317,6 +312,15 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 finish();
             return true;}
+        });
+
+        Button recLines = (Button) findViewById(R.id.reclines); // A long press will record the current line on ice and store it. Max 3.
+        recLines.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                RecordLines();
+                return true;
+            }
         });
 
         final PlayerButton pf1 = (PlayerButton)findViewById(R.id.playerf1);
@@ -682,6 +686,90 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
                 editButtonText(pgk2);
                 return true;}
         });
+
+        // Add listeners for "Player Line Change" buttons.
+        final Button l1btn = (Button) findViewById(R.id.lineonebutton);
+        l1btn.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                pressMeLine(l1btn, 1);
+                return true;
+            }
+        });
+
+        final Button l2btn = (Button) findViewById(R.id.linetwobutton);
+        l2btn.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                pressMeLine(l2btn, 2);
+                return true;
+            }
+        });
+
+        final Button l3btn = (Button) findViewById(R.id.linethreebutton);
+        l3btn.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                pressMeLine(l3btn, 3);
+                return true;
+            }
+        });
+
+        final Button l4btn = (Button) findViewById(R.id.linefourbutton);
+        l4btn.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                pressMeLine(l4btn, 4);
+                return true;
+            }
+        });
+
+    }
+
+    private void pressMeLine(Button plinebutton, int i) {
+        //TODO Add functionality when a Line Button is pressed.
+        switch (i) {
+            case 1:   // This is Line 1
+                findViewById(R.id.playerf1).performClick();
+                findViewById(R.id.playerf2).performClick();
+                findViewById(R.id.playerf3).performClick();
+                findViewById(R.id.playerd1).performClick();
+                findViewById(R.id.playerd2).performClick();
+                break;
+            case 2:   // This is Line 2
+                findViewById(R.id.playerf4).performClick();
+                findViewById(R.id.playerf5).performClick();
+                findViewById(R.id.playerf6).performClick();
+                findViewById(R.id.playerd3).performClick();
+                findViewById(R.id.playerd4).performClick();
+                break;
+            case 3:   // This is Line 3
+                findViewById(R.id.playerf7).performClick();
+                findViewById(R.id.playerf8).performClick();
+                findViewById(R.id.playerf9).performClick();
+                findViewById(R.id.playerd5).performClick();
+                findViewById(R.id.playerd6).performClick();
+                break;
+            case 4:   // This is Line 4
+                findViewById(R.id.playerf10).performClick();
+                findViewById(R.id.playerf11).performClick();
+                findViewById(R.id.playerf12).performClick();
+                findViewById(R.id.playerd7).performClick();
+                findViewById(R.id.playerd8).performClick();
+                break;
+        }
+    }
+
+    private void RecordLines() {
+
+        TextView tv1 = (TextView) findViewById(R.id.textView4);
+        TextView tv2 = (TextView) findViewById(R.id.textView4old1);
+        TextView tv3 = (TextView) findViewById(R.id.textView4old2);
+        TextView tv4 = (TextView) findViewById(R.id.textView4old3);
+
+        tv4.setText(tv3.getText());
+        tv3.setText(tv2.getText());
+        tv2.setText(tv1.getText());
     }
 
     private void setInitialButtonPropertiesFromArrayList(PlayerButton b, Integer index) {
@@ -691,14 +779,6 @@ public class VisitorTeamActivity2 extends AppCompatActivity {
         //This is important, because the index of the button specifies the position of the player in the
         //Arraylist<Player> visitorRoster. If the information is updated, we can use this to access the Array.
     }
-
-/*    private ArrayList<Player> setupLocalCopyOfVisitorRoster(ArrayList<Player> myRoster) {
-       Integer listlength = visitorRoster.size();
-        for (Integer i=0; i<=listlength; i++){
-            myRoster.add (visitorRoster.get(i));
-        }
-        return myRoster;
-    }*/
 }
 
 
