@@ -4,15 +4,16 @@
 <resources>
 
 
-    <dimen name="plbuttonw">100dp</dimen>
-    <dimen name="lbuttonw">300dp</dimen>
-    <dimen name="backbuttonw">200dp</dimen>
-    <dimen name="activity_vertical_margin">10dp</dimen>
-    <dimen name="activity_horizontal_margin">10dp</dimen>
-    <dimen name="test_text_size">25dp</dimen>
-    <dimen name="buttontxtsize">25dp</dimen>
-    <dimen name="toomanytextsize">30dp</dimen>
-    <dimen name="buttonpadding">15dp</dimen>
+    <dimen name="plbuttonw">100sp</dimen>
+    <dimen name="lbuttonw">300sp</dimen>
+    <dimen name="backbuttonw">200sp</dimen>
+    <dimen name="activity_vertical_margin">10sp</dimen>
+    <dimen name="activity_horizontal_margin">10sp</dimen>
+    <dimen name="test_text_size">25sp</dimen>
+    <dimen name="buttontxtsize">25sp</dimen>
+    <dimen name="toomanytextsize">30sp</dimen>
+    <dimen name="buttonpadding">@null</dimen>
+    <dimen name="buttonbackgroundpadding">5sp</dimen>
 
 
 
